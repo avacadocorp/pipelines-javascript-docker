@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: avacadocorppipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: avacadocorppipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: avacadocorppipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: avacadocorppipelinesjavascriptdocker 
+          image: mycontainer27registry.azurecr.io/avacadocorppipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
